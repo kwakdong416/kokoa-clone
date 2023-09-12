@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
+body {
+  /* font-family: -apple-system "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;  이 코드들은 font-family라고 쳤을 때 바로 옵션으로 나오는 것들이다. */
+
+  font-family: "Roboto", sans-serif; /* 위 import로 가져온 글씨체를 사용하고 있다.  */
+}
+
+.status-bar {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+  /* <span>과 아이콘 사이의 margin을 5px 주었다. */
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* align-itmes:center를 줘서  아이콘들을 보기 좋게 정렬했다. */
+
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+  /* Battery 아이콘 양옆으로 margin을 줬다. */
+}
+
+/* 폰트어썸 아이콘의 이름으로 margin을 줘서 옆 아이콘들과의 공간을 줬다. 
+
+font-family라고 치기만 해도 다양한 폰트 옵션들이 나온다. 위 코드의 경우 apple 시스템의 폰트를 사용하는데 이후 나오는 글씨체들은
+혹시 apple 시스템 폰트를 사용할 수 없을 때 사용될 글씨체들이다.
+
+https://fonts.google.com/ 에서 다양한 폰트들을 가져올 수 있다. 
+
+구글 폰트는 html의 <head>에 <link>를 사용해서 추가하는 방법과 css 파일에 import로 추가하는 방법이 있는데 후자가 권장된다.
+
+import를 사용할 때는 css 파일의 상단에 작성하는 것이 좋다.
+
+
+*/
+
+/*
+
+위 코드에서 justify-content: space-between;을 사용할 경우 element마다 width가 다르기 떄문에 
+완전히 정중앙이 아닌 어중간한 중간으로 나오게 된다. 이를 해결하기 위해선 css hack이라는 스킬을 사용해야 한다.
+
+css hack이란 일종의 레시피로 이유는 알 수 없지만 실제로 작동하는 스킬을 의미한다. 사람들이 서로 발견해서 공유하기도 한다.
+
+
+- 레시피 같이 어디든 쓸 수 있다. 이상하지만 작동한다.
+- 1 상위 박스 : justify-content: center; -중앙으로 몰림
+- 2 내부 박스 범위 : width: 33%; -왼쪽으로 몰려서 범위 벌어짐, 왼쪽 위치할 박스는 왼쪽에 붙어서 정렬됨
+- 3 중앙에 위치할 박스 : display: flex; justify-content: center; -중앙에 위치할 박스만 중앙에 위치함
+- 4 오른쪽에 정렬할 박스 : *display*: flex; *justify-content*: flex-end; *align-items*: center; -오른쪽에 붙어서 정렬됨
+
+*/
