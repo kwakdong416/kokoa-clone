@@ -1,0 +1,5 @@
+:root {
+  --yellow: #fae100;
+}
+
+/* variables.css 파일을 styles.css 파일에서 import 해줘야 사용이 가능하다. */
