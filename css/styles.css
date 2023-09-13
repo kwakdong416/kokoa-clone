@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
 @import "reset.css";
 @import "status-bar.css";
-
-/* reset.css 파일의 경로를 표시했다. */
+@import "variables.css";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -15,13 +14,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-/*
-text-aligndms 속성의 텍스트의 수평 정렬을 설정하는 데 사용된다. left , right , center , justify 등의 옵션을 설정할 수 있다. 
-display 형식은 텍스트 엘리먼트에 먹히지 않는다.  
-아래에서 50%로 너비를 제한해 텍스트가 왼쪽으로 쏠리게 돼서 <header> , <h1> , <p>를 모두 center에 위치하게 하기 위해 
-display: flex;를 준 후  텍스트를 수직 center로 배치하기 위해 flex-direction: column;를 수평 centeㄱ로 배치하기 위해 align-items: center; 를 사용한다.
- flex-direction고 align-items 모두 flexbox에서 사용 가능하다.
-*/
 
 .welcome-header__title {
   margin-bottom: 20px;
@@ -31,30 +23,43 @@ display: flex;를 준 후  텍스트를 수직 center로 배치하기 위해 fle
 .welcome-header__text {
   width: 60%;
   opacity: 0.7;
-  /*  
-  텍스트가 여러 줄로 나오게 하기 위해 너비를 제한했다.  
-  투명도를 조절해 글씨를 회색으로 만들었다.
-  */
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* Email of phone number와 password 사이를 구분하는 경계선을 만들었다. */
+  margin-bottom: 25px;
+  /*  <input>들간의 공간을 만듬 */
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  /* placeholder에 쓰인 글자들은 색이 더 연해야 한다.  */
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+  /*  variables.css 에 작성한 변수를 사용한다. */
 }
 
 /*
-html 파일의 <body>를 보면 우리가 원하든 원치 않든 margin을 가지고 있는데 이것은 웹 브라우저가 자동으로 설정한 margin이다.
+input:focus {
+  outline: none;
+}  을 reset.css에 적어줘 focus 됐을 때 outlone이 사라지게 설정했다.
 
-이 margin이나 padding 등을 제거하기 위해 reset css을 사용하면 된다.
 
-구글에 reset css 2.0이라고 검색하면 css 코드가 나오는데 이걸 복붙한 후 reset.css 파일을 만든다.
+colorzilla라느 크롬 확장앱을 사용해 여러 페이지나 파일의 색상을 알아낼 수 있다.
 
-이 파일은 margin:0; padding:0; border:0; 등을 가진 파일이다.
-
-html 파일에 <link>를 사용해 reset.css의 경로를 표시할 수도 있지만 css 파일에 import를 사용하는 것이 낫다.
-
-이제 브라우저 스타일이 아닌 우리가 직접 디자인을 할 수 있다.
-*/
-
-/*
-
-앞으로 styles.css는 다른 css 파일을 추가하는 파일의 역할을 맡게 된다.
-
- status-bar 관련 요소만 분리한 status-bar.css 파일을 분리해 별도의 파일로 만들었다. 
+변수를 담는 variables.css라는 파일을 별도로 만들었다.
 
 */

@@ -123,16 +123,10 @@ table {
   border-spacing: 0;
 }
 
-/*
-html 파일의 <body>를 보면 우리가 원하든 원치 않든 margin을 가지고 있는데 이것은 웹 브라우저가 자동으로 설정한 margin이다.
-
-이 margin이나 padding 등을 제거하기 위해 reset css을 사용하면 된다.
-
-구글에 reset css 2.0이라고 검색하면 css 코드가 나오는데 이걸 복붙한 후 reset.css 파일을 만든다.
-
-이 파일은 margin:0; padding:0; border:0; 등을 가진 파일이다.
-
-html 파일에 <link>를 사용해 reset.css의 경로를 표시할 수도 있지만 css 파일에 import를 사용하는 것이 낫다.
-
-이제 브라우저 스타일이 아닌 우리가 직접 디자인을 할 수 있다.
-*/
+input:focus {
+  outline: none;
+  /* 
+  input이 focus 됐을 때 outline이 사라진다. 
+  모든 input에 적용시키기 위해 reset.css에 적어준다.
+  */
+}
