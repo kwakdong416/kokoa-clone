@@ -44,7 +44,10 @@ body {
 
 #login-form input::placeholder {
   color: rgba(0, 0, 0, 0.4);
-  /* placeholder에 쓰인 글자들은 색이 더 연해야 한다.  */
+  /* 
+  placeholder에 쓰인 글자들은 색이 더 연해야 한다.  
+  여기서 input:placeholder는 일종의 가상 클래스 선택자(pseudo element)이다.
+  */
 }
 
 #login-form input:focus {
