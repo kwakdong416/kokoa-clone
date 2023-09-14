@@ -33,7 +33,11 @@
       <input type="text" placeholder="Email or phone number" />
       <input type="password" placeholder="Password" />
       <input value="Log in" type="submit" />
-      <!-- Log in 버튼이다. -->
+      <!-- 
+      Log in 버튼이다. 
+      log in 버튼도 input이기 때문에 focus하면 border-bottom이 노란색이 된다.
+      이걸 방지하기 위해 styles.css 파일에서 :not()을 이용해 설정해줬다.
+      -->
       <a href="#"> Find Kokoa Account or Password.</a>
     </form>
     <script
