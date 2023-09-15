@@ -130,3 +130,16 @@ input:focus {
   모든 input에 적용시키기 위해 reset.css에 적어준다.
   */
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 
+링크의 색상이 기본색인 blue가 아니라 상속받은 색상을 사용하게 하기위해 reset.css에 코드를 추가해 
+네비게이션 뿐만이 아니라 모든 링크의 색상이 상속받은 색 즉 검은색을 사용하게 된다. 
+
+text-decoration: none; 으로 아이콘의 밑줄도 제거했다.
+
+*/
