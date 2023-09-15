@@ -1,0 +1,29 @@
+.nav {
+  position: fixed;
+  /* position: fixed로 스크롤을 하든 뭘 하든 원래 위치에 고정된다. */
+  bottom: 0;
+  /* bottom: 0;으로 맨 아래에 위치하게 한다. */
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  /* padding 때문에 ellipsis 아이콘이 사라졌던 걸 이 코드로 다시 보이게 만들었다. 다음 강의에서 자세히 설명 */
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  /*  아이콘들을 수평으로 위치시키기 위해 flexbox를 적용했다. */
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: #2e362e;
+}
+
+/* 
+링크의 색상이 기본색인 blue가 아니라 상속받은 색상을 사용하게 하기위해 reset.css에 코드를 추가했다. 
+reset.css에 추가해 네비게이션 뿐만이 아니라 모든 링크의 색상이 상속받은 색 즉 검은색을 사용하게 된다.
+
+다만 완전한 검은색이 아니기 때문에 이경우 스크린샷의 색상을 알아내 추가적으로 아이콘 색상을 설정해줬다.
+*/
