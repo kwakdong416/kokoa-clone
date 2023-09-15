@@ -1,1 +1,77 @@
-Hello this is friends.
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freinds - Kokoa Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>11%</span>
+        <i class="fas fa-battery-full"></i>
+        <!-- Battery Icon -->
+        <i class="fas fa-bolt"></i>
+        <!-- Lightning Icon -->
+      </div>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html"><i class="fas fa-user fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#"><i class="far fa-comment fa-2x"></i></i></i></a>
+        </li>
+        <li class="nav__btn">
+            <a class="nav__link" href="#"><i class="fas fa-search fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+            <a class="nav__link" href="#"><i class="fas fa-ellipsis-h fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+<!--
+nav>ul>li*4>a 이 코드를 입력하면 자동으로 코드를 어느정도  생성해준다. 순차적으로 해야한다. 안 그러면 화면에 안 나온다.
+
+위와같이 코드를 생성한 후 #과 tab만으로 간편하게 작성이 가능하다.(수정하다보면 다음 tab이 옳게 먹히지 않는다.)
+
+fa-2x를 사용해 아이콘의 크기를 키워줬다.
+
+이번엔 class를 사용해 css를 꾸며보자
+
+ctrl + d 로 동일한 문자를 선택할 수 있다.
+-->
+
+    <script
+      src="https://kit.fontawesome.com/efe11a9fb4.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<!--
+index.html의 내용을 복붙해온 뒤 필요 없는 부분을 쳐냈다.
+
+status-bar는 필요하니 남겨두고 <header>와 <form>은 필요 없느니 지운다.
+
+아이콘 사용을 위해 폰트어썸 <script>도 놔둔다.
+
+네비게이션은 보통 ul로 나눠지고 그 안에 수많은 li들로 구성된다.
+
+<ul>은 순서 없는 목록 , <ol> 은 순서 있는 목록 , <li> 는 목록에서 각 항목을 구성한다.
+
+구글도 <li>가 <a>를 가지게 해서 네비게이션을 찾아와 ul의 li 안에 있는 link를 가져오게끔 한다. 
+
+#6.10 Navigation Bar part One의 01:45를 보면 이해가 간다.
+-->
