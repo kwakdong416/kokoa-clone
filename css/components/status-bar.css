@@ -2,10 +2,18 @@
   display: flex;
   justify-content: center;
   padding: 5px 3px;
+
   /*  아이콘에 padding 값을 줬다. */
 }
 .status-bar__column {
-  width: 33%;
+  width: 100%;
+  position: fixed;
+
+  /* 
+position: fixed를 사용하기 전 width: 33%를 줬던 이유는 css hack 사용시 재정렬을 하기 전 왼쪽으로 모든 아이콘을 모아놓기 위해서이다.  
+왼쪽) (상단 요소 그대로) ,중앙) display: flex, justify-content: center , 오른쪽) display: flex, justify-content: flex-end, align-items: center 이 그것이었다.
+이제는 스크롤 시에도 고정시키기 위해 posiotn: fixed;를 줘야 하므로 wodth: 100%를 줘야만 한다.
+  */
 }
 .status-bar__column:first-child span {
   margin-right: 5px;
