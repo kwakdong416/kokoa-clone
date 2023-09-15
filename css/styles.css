@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
 @import "reset.css";
 @import "variables.css";
-/*Components*/
 @import "components/status-bar.css";
+@import "components/nav-bar.css";
+/*Components*/
 @import "screens/login.css";
 /*Screens*/
 
 body {
   font-family: "Roboto", sans-serif;
+  height: 1000vh;
+  /* 네비게이션바가 스크롤 시에도 fixed로 잘 고정되는지 확인하기 위해 높이를 늘렸다.  */
 }
 
-/* 로그인 페이지의 내용을 분리해 login.css 파일을 별도로 만들었다. */
+/* @import의 순서도 매우 중요하다. 순서에 따라 변수를 사용하지 못 하는 경우처럼 문제가 생길 수 있다. */
