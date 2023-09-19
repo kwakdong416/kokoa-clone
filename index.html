@@ -32,7 +32,6 @@
     <form action="friends.html" method="get" id="login-form">
       <input name="username" type="text" placeholder="Email or phone number" />
       <input name="password" type="password" placeholder="Password" />
-      <!-- <input>에 name을 추가해줬다. 아이디와 비밀번호를 아무 값이나 넣고 로그인 해보면 friends.html에 적은 문구가 나오고 url에 name이 노출된다.  -->
       <input value="Log in" type="submit" />
       <a href="#"> Find Kokoa Account or Password.</a>
     </form>
@@ -42,31 +41,3 @@
     ></script>
   </body>
 </html>
-
-<!-- 
-.welcome-header__title과 같은 BEM 형식과 #login-form 형식 중 원하는 형식을 사용하면 된다. 다만 BEM 형식이 더 권장된다.
-
-로그인 페이지 관련 내용을 분리해 login.css 파일을 만들었다.
-
-screens 와 components 폴더를 만들어 login.css를 screens에 status-bar.css를 components 폴더에 집어넣었다.
-
-이렇게 하면 더 조직적으로 파일들을 관리할 수 있다. 이동 후 styles.css에서 @import 경로를 알맞게 수정해주는 것을 잊지 말자
-
-style.css 파일에는 font-famil와 같이 모든 스크린에 적용될 수 있는 스타일을 써놓는 것이 니코쌤의 스타일이다.
-
--->
-
-<!-- 
-<form>은 매우 중요한 2가지 속성을 가지고 있다. 하나는 action이고 다른 하나는 method이다.
-
-action은 어떤 페이지로 데이터를 보낼 건지 지정할 수 있고 
-
-method는 2가지 방식 중 하나를 골라 사용할 수 있다. POST와 GET이 그 2가지인데 이 과정에선 POST는 백엔드 서버에 정보를 전송하는 방식이기 때문에 POST를 사용할 수 없다. 
-
-그래서 GET을 사용해야 한다. GET은 보안이 매우 취약하기 때문에 username과 password를 GET 방식으로 보내면 안 된다.
-
-URL에 포함돼도 상관없는 정보들을 보낼 때 사용하는 것이 GET 방식이다.
-
-[풀스택]유튜브 클론 코딩 강의를 보면 GET과 POST 방식에 대해 더 자세히 알아볼 수 있다.
-
--->
