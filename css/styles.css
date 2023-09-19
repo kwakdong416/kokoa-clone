@@ -6,6 +6,8 @@
 /*Components*/
 @import "screens/login.css";
 /*Screens*/
+@import "components/screen-header.css";
+/* 3페이지의 헤더를 위한 css 파일을 별도로 만들었다. */
 
 body {
   font-family: "Roboto", sans-serif;

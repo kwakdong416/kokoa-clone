@@ -39,7 +39,6 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-
   left: 15px;
   bottom: 15px;
   /* absolute는 가장 가까운 relative 부모를 기준으로 이동시켜준다. absolute는 relative와 달리 레이어를 유지시키지 않아서 아이콘과 겹쳐 보이게 할 수 있다. */
@@ -65,5 +64,6 @@ inline 속성을 가지는 요소들도 flex 컨테이너 내에서 flex 아이�
   /* 
   여기서도 positon: relative;를 사용해 가장 가까운 relative 부모인  nav__link  즉 아이콘을 기준으로 움직일 수 있도록 했다.
   여기서도 display: flex;를 줘서 width와 height을 가질 수 있도록 했다.
+  left와 right , top과 bottom이 각각 반대 방향으로 적용되는 이유는 모르겠다.
   */
 }
