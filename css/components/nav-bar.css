@@ -6,9 +6,13 @@
   width: 100%;
   background-color: #f9f9fa;
   padding: 20px 50px;
-  box-sizing: border-box;
-  /* padding 때문에 ellipsis 아이콘이 사라졌던 걸 이 코드로 다시 보이게 만들었다. 다음 강의에서 자세히 설명 */
   border-top: 1px solid rgba(121, 121, 121, 0.3);
+  box-sizing: border-box;
+  /* 
+  padding 떄문에 맨 오른쪽 ellipsis 아이콘이 사라졌었다. 이를 다시 보이게 하기 위해 위 코드를 사용했다.
+  box-sizing: border-box; 를 주면 padding을 줘도 신경쓰지말고 내 box의 사이즈를 늘리지 말아 달라는 의미이다.
+  https://fluanceifi.tistory.com/27 - 자세한 설명
+   */
 }
 
 .nav__list {
@@ -18,12 +22,48 @@
 }
 
 .nav__link {
+  position: relative;
+  /* 부모에게 position: relavtive;를 줘서 dkfodptj position: absolute를 제대로 사용할 수 있게 한다. */
   color: #2e362e;
 }
 
-/* 
-링크의 색상이 기본색인 blue가 아니라 상속받은 색상을 사용하게 하기위해 reset.css에 코드를 추가했다. 
-reset.css에 추가해 네비게이션 뿐만이 아니라 모든 링크의 색상이 상속받은 색 즉 검은색을 사용하게 된다.
+.nav__notification {
+  background-color: tomato;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  /* 사각형을 원으로 만들기 위해선 width의 반 값을 border-radius로 주면 된다. */
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 
-다만 완전한 검은색이 아니기 때문에 이경우 스크린샷의 색상을 알아내 추가적으로 아이콘 색상을 설정해줬다.
-*/
+  left: 15px;
+  bottom: 15px;
+  /* absolute는 가장 가까운 relative 부모를 기준으로 이동시켜준다. absolute는 relative와 달리 레이어를 유지시키지 않아서 아이콘과 겹쳐 보이게 할 수 있다. */
+
+  /* display: block;  display: flex;와 충돌해 사용하지 않는다. */
+
+  /*  
+  nav__notification이 <span>이기 때문에 display: block;을 줘야 width와 height이 적용된다.
+  inline 요소는 높이와 너비를 가질 수 없지만 block 요소는 높이와 너비를 가질 수 있다.
+  그래서 display: block;을 준 것이다.
+inline 속성을 가지는 요소들도 flex 컨테이너 내에서 flex 아이템으로 동작한다. 따라서 span 태그도 flex 아이템이 된어 block 요소가 된 효과를 낸다.
+
+  */
+}
+.nav__reddot {
+  background-color: tomato;
+  position: absolute;
+  display: flex;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  left: 30px;
+  /* 
+  여기서도 positon: relative;를 사용해 가장 가까운 relative 부모인  nav__link  즉 아이콘을 기준으로 움직일 수 있도록 했다.
+  여기서도 display: flex;를 줘서 width와 height을 가질 수 있도록 했다.
+  */
+}
