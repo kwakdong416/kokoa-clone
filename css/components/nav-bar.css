@@ -23,7 +23,7 @@
 
 .nav__link {
   position: relative;
-  /* 부모에게 position: relavtive;를 줘서 dkfodptj position: absolute를 제대로 사용할 수 있게 한다. */
+  /* 부모에게 position: relavtive;를 줘서 position: absolute를 제대로 사용할 수 있게 한다. */
   color: #2e362e;
 }
 
@@ -62,8 +62,8 @@ inline 속성을 가지는 요소들도 flex 컨테이너 내에서 flex 아이�
   border-radius: 50%;
   left: 30px;
   /* 
-  여기서도 positon: relative;를 사용해 가장 가까운 relative 부모인  nav__link  즉 아이콘을 기준으로 움직일 수 있도록 했다.
+  여기서도 positon: absolute;를 사용해 가장 가까운 relative 부모인  nav__link  즉 아이콘을 기준으로 움직일 수 있도록 했다.
   여기서도 display: flex;를 줘서 width와 height을 가질 수 있도록 했다.
-  left와 right , top과 bottom이 각각 반대 방향으로 적용되는 이유는 모르겠다.
+  left와 right , top과 bottom이 각각 반대 방향으로 적용된다.
   */
 }
