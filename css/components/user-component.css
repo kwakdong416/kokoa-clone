@@ -1,0 +1,43 @@
+.user-component__column,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+
+  /* 
+  display: flex;를 줘서 수직으로 배치돼 있던 걸 수평으로 정렬시킨다. 
+
+  user-component는 2개의 column을 가진 <div>이다. 이후 다른 요소를 추가할 수 있기 때문에 first-child를 사용한 것이다.
+
+  text-align은 block 요소에만 적용이 가능하며 정렬되는 것은 block 요소 속 inline 요소 뿐이다. 
+ 
+  */
+
+  /*
+user-component__column:first-child는
+user-component__column의 자식(img, h4) 중 첫째가 아니고
+user-component__column이랑 똑같은 클래스를 가지고 있는 형제 중에서 첫째만 선택한다라는 뜻이다.
+그러므로 만약 .user-component__column:nth-child(2);를 사용하면 <div class="user-component__column"></div>가 선택된다.
+*/
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 40%;
+  text-align: center;
+  margin-right: 20px;
+  /* 아이콘과 Nicolas 텍스트에 margin을 주어 공간을 만들었다. */
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.user-component__subtitle {
+  margin-top: 8px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 반복되는 작업들은 component로 만들어두면 나중에 재활용하기 매우 쉽다. */
