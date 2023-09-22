@@ -1,4 +1,4 @@
-.user-component__column,
+.user-component,
 .user-component__column:first-child {
   display: flex;
   align-items: center;
@@ -41,3 +41,19 @@ user-component__column이랑 똑같은 클래스를 가지고 있는 형제 중�
 }
 
 /* 반복되는 작업들은 component로 만들어두면 나중에 재활용하기 매우 쉽다. */
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 40%;
+}
+
+.user-component__title--not-bold {
+  font-weight: 400;
+  /* friends.html에서 굵지 않은 Channel 텍스트를 위해 만들었다. */
+}
