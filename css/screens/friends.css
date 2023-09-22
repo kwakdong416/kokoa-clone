@@ -7,6 +7,9 @@
   */
   background-color: #fafafa;
   padding: 15px 0px;
+  font-size: 18x;
+  margin-bottom: 10px;
+  /* Friends' Names Display와 friends-screen 사이에 margin을 주었다.*/
 }
 
 /* 
@@ -18,4 +21,12 @@ justify-content와 alignn-items는 flexbox일 때만 사용 가능하다.
   margin: 0px 5px;
   color: rgba(0, 0, 0, 0.3);
   /* 아이콘 또한 일종의 텍스트이기 때문에 색상의 변경이 가능하다. */
+}
+
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+  /* 
+friends.html에서 <main> 태그를 이용해 3페이지에 사진과 텍스트 , subtitle이 나오는 부분을 하나의 box로 만든 다음 padding 주었다.
+이렇게 하면 사진이 Friends라고 적힌 header만큼 왼쪽에 공간이 생긴다.
+*/
 }
