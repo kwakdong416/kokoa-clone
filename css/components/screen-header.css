@@ -1,18 +1,19 @@
-.screen__header {
+.screen-header {
   display: flex;
   /* display: flex;를 줘서 <h1>과 아이콘들이 한줄에 나란히 정렬된다. */
   justify-content: space-between;
-  padding: 60px 25px;
-  /* padding을 줘서 status-bar와 header가 겹치는 걸 방지했다. */
+  align-items: center;
+  padding: var(--horizontal-space);
+  /* variables.css에 있는 변수를 가져와 사용했다. */
 }
 
-.screen_header__title {
+.screen-header__title {
   font-size: 32px;
   font-weight: 600;
   /* Friends 텍스트에 대한 설정 */
 }
 
-.screen_header__icons span {
+.screen-header__icons span {
   margin-left: 25px;
   /* <div> 내 <span>들끼리의 margin-left를 주었다.*/
 }
