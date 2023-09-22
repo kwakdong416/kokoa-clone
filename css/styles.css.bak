@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap");
+@import "reset.css";
+@import "variables.css";
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css" /*Components*/ @import
+  "screens/login.css";
+@import "screens/friends.css";
+/*Screens*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 1000vh;
+  /* 네비게이션바가 스크롤 시에도 fixed로 잘 고정되는지 확인하기 위해 높이를 늘렸다.  */
+  color: #2e362e;
+  /* nav__link에서 사용하던 색상을 <body>의 기본 색상으로 설정했다. */
+}
+
+/* @import의 순서도 매우 중요하다. 순서에 따라 변수를 사용하지 못 하는 경우처럼 문제가 생길 수 있다. */
