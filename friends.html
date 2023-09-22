@@ -23,9 +23,9 @@
         <!-- Lightning Icon -->
       </div>
     </div>
-    <header class="screen__header">
-      <h1 class="screen_header__title">Friends</h1>
-      <div class="screen_header__icons">
+    <header class="screen-header">
+      <h1 class="screen-header__title">Friends</h1>
+      <div class="screen-header__icons">
       <span><i class="fas fa-search fa-lg"></i></span>
       <span><i class="fas fa-music fa-lg"></i></span>
       <span><i class="fas fa-cog fa-lg"></i></span>
@@ -38,24 +38,53 @@
       <i class="fas fa-exclamation-circle"></i>Friends' Names Display<i class="fas fa-chevron-right fa-xs"></i>
     </a>
 
+  <main class="friends-screen">
     <div class="user-component">
     <!-- 이 부분이 페이지의 사진과 텍스트 부분이 될 것이다. -->
       <div class="user-component__column">
         <img 
         src="https://avatars.githubusercontent.com/u/3612017" 
-        class="user-component__avatar"
+        class="user-component__avatar user-component__avatar--xl" 
+         
         />
-        <!-- 3페이지로 치면 사진 부분에 해당한다. -->
+   
         <div class="user-component__text">
            <h4 class="user-component__title">Nicolas</h4>
-          <!-- 3페이지로 치면 텍스트 부분 Nicolas에 해당한다. -->
-          <h6 class="user-component__subtitle">this text whatever</h6>
-          <!-- 현재는 필요 없지만 테스트용으로 일단 subtitle을 만들어봤다. -->
+          <!-- <h6 class="user-component__subtitle">this text whatever</h6>
+           현재는 필요 없지만 테스트용으로 일단 subtitle을 만들어봤다. -->
         </div>
       </div>
       <div class="user-component__column"></div>
       <!-- .user-component__column*2 를 쳐보면 자동완성 되는 코드가 나타난다. -->
     </div>
+    <div class="friends-screen__channel">
+      <div class="friends-screen__channel-header">
+        <span>Channel</span>
+        <i class="fas fa-chevron-up fa-xs"></i>
+      </div> 
+      <!-- friends-screen__channel-header , 큰 user-component와 작은 user-component 사이 얇게 Channel과 chevron-up 아이콘이 올 자리다. -->
+      <div class="user-component">
+        <!-- 이 부분이 페이지의 사진과 텍스트 부분이 될 것이다. -->
+          <div class="user-component__column">
+            <img 
+            src="https://avatars.githubusercontent.com/u/3612017" 
+            class="user-component__avatar user-component__avatar--sm" 
+           
+            />
+            <!-- 더 작은 아바타에 대한 css를 위해 사용하기 위한 클래스를  줬다. -->
+       
+            <div class="user-component__text">
+               <h4 class="user-component__title">Channel</h4>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span>2</span>
+            <i class="fas fa-chevron-right fa-xs"></i>
+          </div>
+        </div>
+    </div>  
+  </main>
+
 
     <nav class="nav">
       <ul class="nav__list">
