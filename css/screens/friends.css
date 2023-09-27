@@ -30,3 +30,22 @@ friends.html에서 <main> 태그를 이용해 3페이지에 사진과 텍스트 
 이렇게 하면 사진이 Friends라고 적힌 header만큼 왼쪽에 공간이 생긴다.
 */
 }
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  /* avar-xl+Nicolas와 avatar-sm+Channel 두 공간 사이의 Channel+chevron-up에 margin-top을 줘 고간을 만들고 border-top을 줘도 경계선을 만들었다.*/
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  /* 
+ <div> 내의 <div> 들끼리의 공간을 주기 위해 margin-bottom: 30px;를 주었다. 
+  Channel+chevron-up과 avatar-sm+Channel 사이의 공간
+  */
+  display: flex;
+  justify-content: space-between;
+  /*Channel과 chevron-up이 서로 떨어지게 하기 위해 justify-content: space-between;을 주었다.*/
+  color: rgba(0, 0, 0, 0.5);
+}
