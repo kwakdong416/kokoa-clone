@@ -1,0 +1,103 @@
+<!-- friends.html을 복붙해 와서 적절히 수정해 사용한다. -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats - Kokoa Talk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>11%</span>
+        <i class="fas fa-battery-full"></i>
+        <!-- Battery Icon -->
+        <i class="fas fa-bolt"></i>
+        <!-- Lightning Icon -->
+      </div>
+    </div>
+    <header class="screen-header">
+      <h1 class="screen-header__title">Chats</h1>
+      <!--Chats 화면에 맞게 header를 변경했다. -->
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="far fa-comment-dots fa-lg"></i></span>
+        <!-- Chats 화면에 맞게 새로운 아이콘을 추가해줬다. -->
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span><i class="fas fa-cog fa-lg"></i></span>
+        <!--fa-lg로 아이콘 크기를 키워줬다.  -->
+      </div>
+    </header>
+
+    <main class="main-screen">
+      <!--Chats 화면에 대한 설정을 위해 클래스명을 friends.html의 friends-screen에서 
+        main-screen으로 바꿨다. 이후 재활용을 위해 main-screen이란 이름을 사용하는 듯
+        클래스명을 변경시 원래 있던 margin이 사라져서 styles.css에 따로 적용해줬다.
+    -->
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/5f9c58c2017800001.png"
+            class="user-component__avatar user-component__avatar"
+          />
+
+          <div class="user-component__text">
+            <h4 class="user-component__title">KokoaTalk</h4>
+            <!--Chats 화면에 akwrp h4를 수정해주고 h6를 이용해 subtitle을 달아줬다. -->
+            <h6 class="user-component__subtitle">
+              Please check My Kokoa Account Info
+            </h6>
+          </div>
+        </div>
+        <div class="user-component__column"></div>
+        <!-- .user-component__column*2 를 쳐보면 자동완성 되는 코드가 나타난다. -->
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html"
+            ><i class="far fa-user fa-2x"></i>
+            <!-- Chats 화면에 맞게 user 아이콘을 변경해줬다. -->
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html">
+            <!-- find.html은 아직 작성하지 않았지만 일단 적어준다. -->
+            <span class="nav__notification">1</span>
+            <i class="fas fa-comment fa-2x"></i>
+            <!-- Chats 화면에 맞게 comment 아이콘을 변경해줬다. -->
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html"
+            ><i class="fas fa-search fa-2x"></i>
+            <!-- more.html은 아직 작성하지 않았지만 일단 적어준다. -->
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="#">
+            <span class="nav__reddot"></span>
+
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script
+      src="https://kit.fontawesome.com/efe11a9fb4.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
