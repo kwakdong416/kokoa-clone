@@ -10,6 +10,10 @@
   font-size: 18x;
   margin-bottom: 10px;
   /* Friends' Names Display와 friends-screen 사이에 margin을 주었다.*/
+  margin-top: -10px;
+  /*  Friends 화면의 header에 margin-bottom을 줬었는데 friends-display-link가
+  있는 화면에는 안 어울려 여기서 negative margin을 주었다.
+  */
 }
 
 /* 
