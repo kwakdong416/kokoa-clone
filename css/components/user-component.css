@@ -1,3 +1,8 @@
+.user-component {
+  justify-content: space-between;
+  /* avatar-sm+Channel과 2+chevron-right을 분리했다.*/
+}
+
 .user-component,
 .user-component__column:first-child {
   display: flex;
@@ -56,4 +61,9 @@ user-component__column이랑 똑같은 클래스를 가지고 있는 형제 중�
 .user-component__title--not-bold {
   font-weight: 400;
   /* friends.html에서 굵지 않은 Channel 텍스트를 위해 만들었다. */
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
+  /* 여러 user-component들 중 구분을 위해 last-child를 주고 색사을 변경했다.*/
 }
