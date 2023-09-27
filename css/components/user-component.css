@@ -65,5 +65,22 @@ user-component__column이랑 똑같은 클래스를 가지고 있는 형제 중�
 
 .user-component__column:last-child {
   color: rgba(0, 0, 0, 0.5);
-  /* 여러 user-component들 중 구분을 위해 last-child를 주고 색사을 변경했다.*/
+  /* 여러 user-component들 중 구분을 위해 last-child를 주고 색상을 변경했다.*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* flex-direction: column;으로 주축의 방향을 바꾼 후 
+  align-items: flex-end;로 흰 바탕의 하얀 1을 오른쪽으로 이동시켜줬다.
+  다만 이러면 friends.html의 2+chevron-right까지 영향을 끼친다.
+  그래서 friend.html의 해당 부분을 <div> 로 다시 감싸 flex가 아니게 만들어야 한다.
+  */
+}
+
+.user-component__time {
+  display: block;
+  /* 
+  시간 부분에 대한 설정이다.
+  <span>은 inline 요소임으로 display:block;을 줘 높이와 너비를 갖게 만든 후 margin 혹은 padding을 줄 수 있다. 
+  */
+  padding-bottom: 10px;
 }
