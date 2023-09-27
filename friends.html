@@ -79,8 +79,15 @@
             </div>
           </div>
           <div class="user-component__column">
-            <span>2</span>
+            <div>
+              <span>2</span>
             <i class="fas fa-chevron-right fa-xs"></i>
+            </div>
+            <!-- <div>로 다시 싸서  user-component.css 파일에 있는
+            .user-component__column:last-child 에 준 display:flex;를 벗어나게 해
+            아이콘이 의도된 데로 수평으로  배치되도록 했다.
+            (user-componene.css에서 flex-dirction: column 으로 주축의 방향을 변경했었다.)
+            -->
           </div>
         </div>
     </div>  
@@ -94,8 +101,8 @@
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="#">
-            <span class="nav__notification">1</span>
-            <!-- 알림 표시를 위한 <span>을 만들고 nav__notification 이라는 class 명을 부여했다. -->
+            <span class="nav__notification badge">1</span>
+            <!--별도의 component로 분리한 붉은 바탕의 하얀 1을 위해 badge라는 클래스명을 추가하였다.-->
             <i class="far fa-comment fa-2x"></i></i></i>
           </a>
            
