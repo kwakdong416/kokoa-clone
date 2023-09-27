@@ -19,3 +19,9 @@ body {
 }
 
 /* @import의 순서도 매우 중요하다. 순서에 따라 변수를 사용하지 못 하는 경우처럼 문제가 생길 수 있다. */
+
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+
+/* Chats 화면을 포함한 여러 화면에 사용하기 위해 main-screen이라는 클래스명을 쓴 듯 하다. */
