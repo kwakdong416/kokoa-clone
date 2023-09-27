@@ -1,0 +1,20 @@
+/* 붉은 바탕에 흰색 1이 있는 badge를 위한 css 파일을 별도로 만들었다. */
+
+.badge {
+  background-color: tomato;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  /* 사각형을 원으로 만들기 위해선 width의 반 값을 border-radius로 주면 된다. */
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* nav-bar.css에 있던 nav__notification 클래스에 대한 설정을 가져왔다. 
+다만 이 경우 absolute가 아니므로 그에 대한 설정은 가져오지 않았다. 
+absoulte에 대한 설명은 nav-bar에서만 필요하다. 
+이 파일을 styles.css에서 import 해줘야 제대로 적용됨을 잊지 말자
+*/
