@@ -28,31 +28,13 @@
 }
 
 .nav__notification {
-  background-color: tomato;
-  color: white;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  /* 사각형을 원으로 만들기 위해선 width의 반 값을 border-radius로 주면 된다. */
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   left: 15px;
   bottom: 15px;
-  /* absolute는 가장 가까운 relative 부모를 기준으로 이동시켜준다. absolute는 relative와 달리 레이어를 유지시키지 않아서 아이콘과 겹쳐 보이게 할 수 있다. */
-
-  /* display: block;  display: flex;와 충돌해 사용하지 않는다. */
-
-  /*  
-  nav__notification이 <span>이기 때문에 display: block;을 줘야 width와 height이 적용된다.
-  inline 요소는 높이와 너비를 가질 수 없지만 block 요소는 높이와 너비를 가질 수 있다.
-  그래서 display: block;을 준 것이다.
-inline 속성을 가지는 요소들도 flex 컨테이너 내에서 flex 아이템으로 동작한다. 따라서 span 태그도 flex 아이템이 된어 block 요소가 된 효과를 낸다.
-
-  */
+  /* badge.css로 붉은 바탕에 흰 1에 대한 설정을 가져갔다.
+다만 이 경우 absolute가 아니므로 그에 대한 설정은 가져가지 않았다. 
 }
+
 .nav__reddot {
   background-color: tomato;
   position: absolute;
