@@ -34,6 +34,8 @@
   /* badge.css로 붉은 바탕에 흰 1에 대한 설정을 가져갔다.
 다만 이 경우 absolute가 아니므로 그에 대한 설정은 가져가지 않았다. 
 }
+*/
+}
 
 .nav__reddot {
   background-color: tomato;
@@ -43,9 +45,9 @@
   height: 5px;
   border-radius: 50%;
   left: 30px;
-  /* 
+}
+/* 
   여기서도 positon: absolute;를 사용해 가장 가까운 relative 부모인  nav__link  즉 아이콘을 기준으로 움직일 수 있도록 했다.
   여기서도 display: flex;를 줘서 width와 height을 가질 수 있도록 했다.
   left와 right , top과 bottom이 각각 반대 방향으로 적용된다.
   */
-}

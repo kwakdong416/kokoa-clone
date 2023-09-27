@@ -10,6 +10,8 @@
 /*Components*/
 @import "screens/login.css";
 @import "screens/friends.css";
+@import "screens/find.css";
+/* Find 화면을 위해 새로 만든 find.css 파일을 import 시켜줬다. */
 /*Screens*/
 
 body {
