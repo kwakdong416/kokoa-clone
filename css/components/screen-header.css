@@ -5,6 +5,8 @@
   align-items: center;
   padding: var(--horizontal-space);
   /* variables.css에 있는 변수를 가져와 사용했다. */
+  margin-bottom: 15px;
+  /* Chats 화면을 위해 margin을 추가했다. */
 }
 
 .screen-header__title {
