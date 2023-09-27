@@ -58,23 +58,28 @@
             </h6>
           </div>
         </div>
-        <div class="user-component__column"></div>
-        <!-- .user-component__column*2 를 쳐보면 자동완성 되는 코드가 나타난다. -->
+        <div class="user-component__column">
+          <span class="user-component__time">11:22</span>
+          <!-- 시간과 badge 사이에 공간을 주기 위해 클래스명을 부여했다. -->
+          <div class="badge">1</div>
+          <!--새로 만든 badge.css를 이용해 붉은 바탕에 하얀 1을 표시한다. -->
+        </div>
       </div>
     </main>
 
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
-          <a class="nav__link" href="chats.html"
+          <a class="nav__link" href="friends.html"
             ><i class="far fa-user fa-2x"></i>
             <!-- Chats 화면에 맞게 user 아이콘을 변경해줬다. -->
           </a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="find.html">
+          <a class="nav__link" href="chats.html">
             <!-- find.html은 아직 작성하지 않았지만 일단 적어준다. -->
-            <span class="nav__notification">1</span>
+            <span class="nav__notification badge">1</span>
+            <!--별도의 component로 분리한 붉은 바탕의 하얀 1을 위해 badge라는 클래스명을 추가하였다.-->
             <i class="fas fa-comment fa-2x"></i>
             <!-- Chats 화면에 맞게 comment 아이콘을 변경해줬다. -->
           </a>
@@ -88,7 +93,6 @@
         <li class="nav__btn">
           <a class="nav__link" href="#">
             <span class="nav__reddot"></span>
-
             <i class="fas fa-ellipsis-h fa-2x"></i>
           </a>
         </li>
