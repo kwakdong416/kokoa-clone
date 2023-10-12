@@ -84,3 +84,7 @@ user-component__column이랑 똑같은 클래스를 가지고 있는 형제 중�
   */
   padding-bottom: 10px;
 }
+
+.user-component__chats {
+  padding-bottom: 15px;
+}
