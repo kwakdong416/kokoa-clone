@@ -37,8 +37,8 @@ friends.html에서 <main> 태그를 이용해 3페이지에 사진과 텍스트 
 
 .friends-screen__channel {
   margin-top: 25px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  /* avar-xl+Nicolas와 avatar-sm+Channel 두 공간 사이의 Channel+chevron-up에 margin-top을 줘 고간을 만들고 border-top을 줘도 경계선을 만들었다.*/
+  border-top: var(--main-border);
+  /* 변수로 대체했다. */
   padding-top: 15px;
 }
 

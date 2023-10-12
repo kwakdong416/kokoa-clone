@@ -4,7 +4,8 @@
   /* <div>내에 있는 아이콘들을 display: flex;로 수평으로 배치시킨 후 
     justify-content: space-between;로 서로 공간을 적절히 준 후 배치한다.
   */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 25px;
+  /* 아이콘과 밑줄 간의 공간을 주었다. */
 }
 
 .find-icons__icons {
@@ -24,4 +25,89 @@
 .find-icons__icons span {
   margin-top: 18px;
   /* 아이콘과 <span>과의 공간을 주기 위해 margin-top을 주었다. */
+}
+
+.recommended-friends {
+  margin: 25px 0px;
+  padding: 25px 0px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  /* 실제 스크린샷과는 좀 다르게 만들었다. */
+}
+
+.recommended-friends span {
+  display: block;
+  margin: 100px 0px;
+  text-align: center;
+  /* display: flex; 줘버리는 두 텍스트가 한 줄에 나오므로 block을 줬다. */
+  font-size: 18px;
+  color: var(--gray-color);
+}
+
+.recommended-friends__title {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  padding-bottom: 25px;
+}
+
+.open-chat__header span {
+  opacity: 0.6;
+}
+
+.fa-chevron-right {
+  margin-left: 5px;
+  opacity: 0.6;
+}
+
+.open-post {
+  display: flex;
+}
+
+.open-post__title {
+  font-weight: 600;
+  /* #BTS의 글자 굵기를 더 진하게 만들었다. */
+  margin-bottom: 7px;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase;
+  /* 소문자로 작성했던 해쉬태그들을 대문자로 바꿔줬다. */
+  opacity: 0.6;
+}
+
+.open-post__members {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__member-count {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.open-post__members .divider {
+  width: 2px;
+  height: 15px;
+  background-color: var(--gray-color);
+  /* .open-post__members .divider 이렇게 적으면 open-post__members 안에 있는 .divider에만 적용된다.*/
+  /* 그냥 |를 써도 되지만 css 연습을 위해 이렇게 코드를 작성했다. */
+  margin: 0px 5px;
+}
+
+.open-post__member-status {
+  color: #ffb0e0;
 }

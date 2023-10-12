@@ -2,6 +2,8 @@
   --yellow: #fae100;
   --horizontal-space: 25px;
   /* padding에 줄 값을 변수로 저장했다. */
+  --main-border: 1px solid rgba(0, 0, 0, 0.3);
+  /* 자주 쓰이는 밑줄을 그냥 변수로 만들었다. */
+  --gray-color: rgba(0, 0, 0, 0.3);
+  /* 회색을 사용할 일이 많아 아예 변수로 만들었다. */
 }
-
-/* variables.css 파일을 styles.css 파일에서 import 해줘야 사용이 가능하다. */
