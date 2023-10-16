@@ -88,3 +88,8 @@ user-component__column이랑 똑같은 클래스를 가지고 있는 형제 중�
 .user-component__chats {
   padding-bottom: 15px;
 }
+
+.user-component__text i {
+  margin-left: 5px;
+  color: red;
+}

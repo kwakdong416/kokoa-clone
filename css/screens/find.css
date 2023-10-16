@@ -1,31 +1,4 @@
-.find-icons {
-  display: flex;
-  justify-content: space-between;
-  /* <div>내에 있는 아이콘들을 display: flex;로 수평으로 배치시킨 후 
-    justify-content: space-between;로 서로 공간을 적절히 준 후 배치한다.
-  */
-  padding-bottom: 25px;
-  /* 아이콘과 밑줄 간의 공간을 주었다. */
-}
-
-.find-icons__icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /*  flex-direction: column;으로 인해 주축과 교차축이 바뀐 상태이므로 
-    align-items: center;을 적용하면 수평 중앙으로 아이콘이 이동한다.
-*/
-}
-
-.find-icons__icons i {
-  font-size: 35px;
-  /* 아이콘 또한 텍스트이므로 크기 조절이 가능하다. */
-}
-
-.find-icons__icons span {
-  margin-top: 18px;
-  /* 아이콘과 <span>과의 공간을 주기 위해 margin-top을 주었다. */
-}
+/* icon-row 관련 사항들을 분리해 icon-row.css라는 별도의 파일을 만들었다. */
 
 .recommended-friends {
   margin: 25px 0px;

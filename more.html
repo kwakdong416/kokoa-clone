@@ -1,4 +1,4 @@
-<!-- chats.html을 복붙해 와서 적절히 수정해 사용한다. -->
+<!-- find.html을 복붙해 와서 적절히 수정해 사용한다. -->
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find - Kokoa Talk</title>
+    <title>More - Kokoa Talk</title>
     <!-- Find 화면에 맞게 타이틀을 수정해줬다. -->
   </head>
   <body>
@@ -27,71 +27,80 @@
       </div>
     </div>
     <header class="screen-header">
-      <h1 class="screen-header__title">Find</h1>
-      <!--Find 화면에 맞게 header를 변경했다. -->
+      <h1 class="screen-header__title">More</h1>
+      <!--More 화면에 맞게 header를 변경했다. -->
       <div class="screen-header__icons">
         <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
         <span
-          ><i class="fas fa-cog fa-lg"
-            ><span class="screen-header__cog-reddot"></span></i
-        ></span>
-        <!--fa-lg로 아이콘 크기를 키워줬다. , 붉은 점을 찍기 위한 클래스명을 줬다.  -->
+          ><a href="settings.html"
+            ><i class="fas fa-cog fa-lg"
+              ><span class="screen-header__cog-reddot"></span></i
+          ></a>
+        </span>
+        <!-- 아이콘을 <span>으로 감싸는 건 한 줄로 나오게 하기 위함이다.  
+        <a>로 아이콘을 감싸야 아이콘 클릭시 setting.html로 가게된다.
+        -->
       </div>
     </header>
 
-    <main class="main-screen">
+    <main class="main-screen more-screen">
+      <!--more.html의 user-component에만 css를 적용시키기 위해 more-screen이라는 클래스를 추가했다.  -->
+      <div class="user-component">
+        <!-- 이 부분이 페이지의 사진과 텍스트 부분이 될 것이다. -->
+        <div class="user-component__column">
+          <img
+            src="https://avatars.githubusercontent.com/u/3612017"
+            class="user-component__avatar user-component__avatar--xl"
+          />
+
+          <div class="user-component__text">
+            <h4 class="user-component__title">Nicolas</h4>
+            <h6 class="user-component__subtitle">
+              010-1234-5678<i class="fas fa-exclamation-circle"></i>
+            </h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <i class="far fa-comment-alt fa-2x"></i>
+        </div>
+        <!-- .user-component__column*2 를 쳐보면 자동완성 되는 코드가 나타난다. -->
+      </div>
       <div class="icon-row">
         <div class="icon-row__icons">
-          <i class="fas fa-qrcode"></i><span>QR Code</span>
+          <i class="far fa-calendar"></i><span>Calendar</span>
         </div>
         <div class="icon-row__icons">
-          <i class="far fa-address-book"></i><span>Add by Contacts</span>
+          <i class="fas fa-laugh-beam"></i><span>Emotions</span>
         </div>
         <div class="icon-row__icons">
-          <i class="fas fa-fingerprint"></i><span>Add by ID</span>
+          <i class="fas fa-paint-roller"></i><span>Theme</span>
         </div>
         <div class="icon-row__icons">
-          <i class="far fa-envelope"></i><span>Invite</span>
+          <i class="fas fa-file-invoice-dollar"></i><span>Account</span>
         </div>
       </div>
-      <div class="recommended-friends">
-        <h6 class="recommended-friends__title">Recommended-Friends</h6>
-        <!--find.css에서 관련 설정을 해준다. -->
-        <span>You have no recommended friends.</span>
+      <div class="more-suggestions">
+        <h4 class="more-suggestions__title">Suggestions</h4>
       </div>
-      <div class="open-chat">
-        <div class="open-chat__header">
-          <h4>Open Chat</h4>
-          <span
-            >Go to Openchat Home<i class="fas fa-chevron-right fa-xs"></i
-          ></span>
+      <div class="more-suggestions__icons">
+        <div class="more-suggestions__icon">
+          <div class="more-suggestions__icon-image">
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <span class="more-suggestions__icon-text">Kokoa Story</span>
         </div>
-        <div class="open-post">
-          <div class="open-post__column">
-            <h5 class="open-post__title">#BTS</h5>
-            <h6 class="open-post__hashtags">#bts#army#friends</h6>
-            <!-- 대문자는 디자인적인 요소이기 때문에 디자인적인 요소 때문에 대문자로 보여야 한다면 
-              html에서는 소문자로 작성하고 css에서 대문자로 바꿔주면 된다. -->
-            <div class="open-post__members">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Kim_Chaewon_LE_SSERAFIM_220923.jpg/640px-Kim_Chaewon_LE_SSERAFIM_220923.jpg"
-              />
-              <span class="open-post__member-count">802 members</span>
-              <div class="divider"></div>
-              <span class="open-post__member-status">Active</span>
-            </div>
+        <div class="more-suggestions__icon">
+          <div class="more-suggestions__icon-image">
+            <i class="fas fa-quote-right"></i>
           </div>
-          <div class="open-post__column">
-            <div class="open-post__photo">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg/640px-LeBron_James_%2851959977144%29_%28cropped2%29.jpg"
-              />
-              <div class="open-post__heart-count">
-                <i class="fas fa-heart fa-xs"></i><span>326</span>
-              </div>
-            </div>
+          <span class="more-suggestions__icon-text">Kokoa Story</span>
+        </div>
+        <div class="more-suggestions__icon">
+          <div class="more-suggestions__icon-image">
+            <i class="fas fa-quote-right"></i>
           </div>
-          <!--.open-post__column*2 -->
+          <span class="more-suggestions__icon-text">Kokoa Story</span>
         </div>
       </div>
     </main>
