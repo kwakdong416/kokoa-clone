@@ -29,12 +29,17 @@
 
     <header class="alt-header">
       <div class="alt-header__column">
-        <i class="fas fa-angle-left fa-2x"></i>
+        <a href="more.html">
+          <i class="fas fa-angle-left fa-2x"></i>
+        </a>
+        <!--왼쪽 꺽쇠를 누르면 more.html로 돌아갈 수 있도록 했다.  -->
       </div>
       <div class="alt-header__column">
         <h1 class="alt-header__title">Settings</h1>
       </div>
-      <div class="alt-header__column"><i class="fas fa-search fa-lg"></i></div>
+      <div class="alt-header__column">
+        <span><i class="fas fa-search fa-lg"></i></span>
+      </div>
     </header>
 
     <!-- header.alt-header>div.alt-header__column*3 -->
@@ -42,16 +47,25 @@
     <main class="main-screen">
       <ul class="settings-list">
         <li class="settings__setting">
-          <i class="fas fa-bullhorn"></i>
-          <span>Settings</span>
+          <div class="settings__setting-column">
+            <i class="fas fa-bullhorn"></i>
+            <span>Notice</span>
+          </div>
+          <div class="settings__setting-column"></div>
         </li>
         <li class="settings__setting">
-          <i class="fas fa-flask"></i>
-          <span>Kokoa Lab</span>
+          <div class="settings__setting-column">
+            <i class="fas fa-flask"></i>
+            <span>Kokoa Lab</span>
+          </div>
+          <div class="settings__setting-column"></div>
         </li>
         <li class="settings__setting">
-          <i class="fas fa-info-circle"></i>
-          <span>Version</span>
+          <div class="settings__setting-column">
+            <i class="fas fa-info-circle"></i>
+            <span>Version</span>
+          </div>
+          <div class="settings__setting-column">Latest Version</div>
         </li>
       </ul>
     </main>
@@ -70,7 +84,7 @@
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
             <!-- find.html은 아직 작성하지 않았지만 일단 적어준다. -->
-            <span class="nav__notification badge">1</span>
+            <span class="nav__notification badge">4</span>
             <!--별도의 component로 분리한 붉은 바탕의 하얀 1을 위해 badge라는 클래스명을 추가하였다.-->
             <i class="far fa-comment fa-2x"></i>
             <!-- Find 화면에 맞게 comment 아이콘을 변경해줬다. fas는 안이 꽉차있다는 의미아다.
