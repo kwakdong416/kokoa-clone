@@ -18,8 +18,8 @@
     다만 이러면 alt-header가 status-bar를 가리게 된다. 이를 수정하기 위해 z-inderx라는 것을
     사용해야 한다. z-index는 <div>가 맨 앞에서부터 몇 번쨰인지 즉 layer 순서를 나타낸다.
     display를 사용하거나 positon: fixed나 absolute;를 사용하면 layer를 갖게 된다. 기본값은 0이다.
+    즉 status-bar와 alt-header가 main-screen을 덮고있는 것이다.
   */
-
   top: 10px;
 }
 
@@ -34,8 +34,23 @@
 /* z-index는 숫자가 클수록 위의 layer이다. */
 
 .main-chat {
-  margin-top: 150px;
+  margin-top: 120px;
   /* .chat-screen .alt-header에 top: 0;를 줘서 맨 위에 고정시키고 main-chat에 margin-top: 150px;를 줘서
       status-bar와 alt-header가 timestamp 위에 있어서 겹쳐 보이는 현상을 해결한다.
+
+      /* 어떤 요소를 고정하면 그 요소는 이전의 box들과 다른 layer가 되므로 padding이 아닌 margin를 가져야만 한다. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* display: flex;을 주면 배경이 글자에 맞게 크기가 변하는 것을 볼 수 있다. flex이기 떄문
+    flex-direction: column;으로 주축의 방향을 바꾼 후 align-items: center; 로 중앙 정렬
   */
+}
+
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 14px;
 }
