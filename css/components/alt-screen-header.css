@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.alt-header__column {
+  width: 33%;
+}
+
 .alt-header__title {
   font-size: 28px;
   font-weight: 600;
@@ -17,14 +21,27 @@
   margin-right: auto;
 }
 
-.alt-header__column:last-child {
-  margin-left: auto;
+.alt-header__column:nth-child(2) {
+  text-align: center;
 }
 
-/* 위에서 다시  한번 css hack을 사용했다. justify-content: space-between;은 글자수에 따라 완벽한 중앙 정렬이 안 될 수 있어 이런 방법을 사용했다.
+.alt-header__column:last-child {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* settings.html의 alt-header를 정확히 중앙에 위치하게 하기 위해 다시  한번 css hack을 사용했다. 
+justify-content: space-between;은 글자수에 따라 완벽한 중앙 정렬이 안 될 수 있어 이런 방법을 사용했다.
+.alt-header에 justify-content: center;를 줘 아이콘을 중앙으로 몬 뒤 .alt-header__column:first-child 
+margin-right: auto;를 alt-header__column:last-child에는 margin-left: auto; 줘 정확히 중앙에 배치하였다.
 */
 
-.alt-header__column:last-child span:not(:first-child) {
+/*  chat.html의 alt-header를 정확히 중앙에 위치하게 하기 위해 .alt-header__column에 width: 33%; 줘 왼쪽으로 아이콘들을 몰아넣은 뒤
+ .alt-header__column:last-child에  display: flex;와 justify-content: flex-end;를 주고
+  alt-header__column:nth-child(2)에 text-align: center;를 주었다. 이것 또한 css hack 중 하나이다.  */
+
+.alt-header__column span:last-child {
   margin-left: 20px;
-  /*  이렇게 하면 단순 last-child를 사용했을 때와 달리 추후 아이콘 갯수가 늘어나더라도 일정하게 margin을 줄 수 있다. */
+  /* 아이콘 끼리의 공간을 주었다. */
 }

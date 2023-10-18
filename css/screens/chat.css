@@ -1,4 +1,41 @@
 .chat-screen {
   background-color: #abc1d1;
   /* 채팅의 배경색을 설줭해줬다. */
+  height: 11000vh;
+  /* 채팅 화면의 스크롤을 구현하기 위함이다. */
+}
+
+.chat-screen .alt-header,
+.chat-screen .status-bar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  /* position: fixed; 로 고정하고 width를 줘야지만 왼쪽으로 아이콘이 쏠리지 않는다. */
+  box-sizing: border-box;
+  /* box-sizing: border-box;을 주지 않으면 맨 오른쪽 아이콘이 오른쪽까지 넘어가 버린다. */
+  background-color: #abc1d1;
+  /* 스크롤 시에 alt-header와 timestamp가 겹쳐 보이는 것을 방지하기 위해 배경색을 주었다.
+    다만 이러면 alt-header가 status-bar를 가리게 된다. 이를 수정하기 위해 z-inderx라는 것을
+    사용해야 한다. z-index는 <div>가 맨 앞에서부터 몇 번쨰인지 즉 layer 순서를 나타낸다.
+    display를 사용하거나 positon: fixed나 absolute;를 사용하면 layer를 갖게 된다. 기본값은 0이다.
+  */
+
+  top: 10px;
+}
+
+.chat-screen .alt-header {
+  z-index: 1;
+}
+
+.chat-screen .status-bar {
+  z-index: 2;
+}
+
+/* z-index는 숫자가 클수록 위의 layer이다. */
+
+.main-chat {
+  margin-top: 150px;
+  /* .chat-screen .alt-header에 top: 0;를 줘서 맨 위에 고정시키고 main-chat에 margin-top: 150px;를 줘서
+      status-bar와 alt-header가 timestamp 위에 있어서 겹쳐 보이는 현상을 해결한다.
+  */
 }
