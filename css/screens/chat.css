@@ -53,4 +53,53 @@
   padding: 15px;
   border-radius: 25px;
   font-size: 14px;
+  margin-bottom: 25px;
+  /* timestamp와 message-row 간의 공간을 줬다. */
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+
+  /* width: 100%;를 주면 message-row가 왼쪽에 정렬된다.
+  display: flex;로 <img>와 <div>가 한 줄에 오도록 한다.
+  */
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 10px;
+  /* 사진과 message__author 간의 공간을 주었다. */
+}
+.message__author {
+  margin-bottom: 5px;
+  display: block;
+  /* message__author는 <span>이기 때문에 display: block;을 줘야 padding이나 margin을 줄 수 있다. */
+}
+
+.message_info {
+  display: flex;
+  align-items: flex-end;
+  /* align-items를 쓰기 위해 display: flex; 준 후 align-items: flex-end; 으로 수직 아래에 message_info를 배치한다.
+    특히 message_time이 아래쪽에 깔리 게 하기 위함이 크다.
+  */
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  /* 좌우 padding 값을 줘야 배경과 글자 사이 공간이 생김 */
+  font-size: 18px;
+  border-radius: 35%;
+  border-top-left-radius: 0px;
+  /* 말풍선 꼭다리를 만들었다. */
+  margin-right: 5px;
+}
+
+.message__time,
+.message__author {
+  opacity: 0.8;
+  font-size: 13px;
 }
