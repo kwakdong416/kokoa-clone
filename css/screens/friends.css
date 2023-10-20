@@ -54,6 +54,23 @@ friends.html에서 <main> 태그를 이용해 3페이지에 사진과 텍스트 
   color: rgba(0, 0, 0, 0.5);
 }
 
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* spalsh-screen 이 나타났다 사라지는 애니메이션이다. 
+     visibility: hidden;은 html을 무시하도록 하는 테크닉이다.
+     마우스에 걸리적거리지 않도록 해줄뿐 html이 사라진 것이 아니다.
+     뭔가를 실제로 숨기거나 html 사라지게 하려면 javascript를 사용해야 한다.
+     
+     애니메이션른 from to 말고도 0-50-100 식으로도 구성 가능하다.
+  */
+}
+
 .spalsh-screen {
   background-color: var(--yellow);
   position: absolute;
@@ -69,4 +86,17 @@ friends.html에서 <main> 태그를 이용해 3페이지에 사진과 텍스트 
   justify-content: center;
   align-items: center;
   font-size: 132px;
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  animation-delay: 2s;
+  /* 애니메이션을 2초 지연시킨 후 0.4초 동안 실행한다. */
 }
+
+/* css에서는 element들은 이전의 상태로 되돌아간다. 그래서 노란 화면이 다시 나타나는 것 
+   여기에 forwards를 추가해주면 애니메이션이 끝난 상태로 유지한다.다만 element가 사라진
+   것이 아니라 opacity: 0;이 됐을 뿐이기 때문에 다른 것들을 클릭해도 반응이 없다.
+   눈에 안 보일 뿐 여전히 splash-screen이 그 위를 덮고있기 떄문이다.
+
+  위 hideSplashScreen에서 작성한 visibility: hidden;은 html을 무시하도록 하는 테크닉이다.
+     마우스에 걸리적거리지 않도록 해줄뿐 html이 실제로 사라진 것이 아니다.element를 무시할 뿐이다.
+     뭔가를 실제로 숨기거나 html 사라지게 하려면 javascript를 사용해야 한다.
+*/
