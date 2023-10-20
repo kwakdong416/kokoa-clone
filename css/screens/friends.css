@@ -53,3 +53,20 @@ friends.html에서 <main> 태그를 이용해 3페이지에 사진과 텍스트 
   /*Channel과 chevron-up이 서로 떨어지게 하기 위해 justify-content: space-between;을 주었다.*/
   color: rgba(0, 0, 0, 0.5);
 }
+
+.spalsh-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh; /* 화면 높이의 100% */
+  width: 100vw; /* 화면 너비의 100% */
+  top: 0;
+  /* position: absolute;로 모든 것의 위로 오게 한 후  height: 100vh;와 width: 100vw;를 적용해서
+    spalsh-scree 구역 전체를 덮어버린다. 그 후 top: 0;를 적용해서 화면 전체를 덮게 만든다. 
+    
+  
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+}
