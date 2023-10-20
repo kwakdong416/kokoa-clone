@@ -207,4 +207,5 @@ order를 이용해 순서를 바꿀 수 있다. 다만 flex children에게만 �
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+  /* 버튼을 클릭해도 아무일도 일어나지 않게했다. */
 }
