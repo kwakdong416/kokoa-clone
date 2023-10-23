@@ -27,6 +27,21 @@
   color: #2e362e;
 }
 
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(180deg);
+  }
+  100% {
+  }
+
+  /* translateY는 Y축을 기준으로 이동시킨다는 의미이다. 
+     rotateY는 Y축을 기준으로 회전시킨다는 의미이다.
+  */
+}
+
 .nav__notification {
   position: absolute;
   left: 15px;
@@ -35,6 +50,8 @@
 다만 이 경우 absolute가 아니므로 그에 대한 설정은 가져가지 않았다. 
 }
 */
+  animation: notificationAnimation 2s ease-in-out infinite;
+  /* 애니메이션이 영구적이길 원하므로 infinite를 붙여준다. */
 }
 
 .nav__reddot {
@@ -51,3 +68,46 @@
   여기서도 display: flex;를 줘서 width와 height을 가질 수 있도록 했다.
   left와 right , top과 bottom이 각각 반대 방향으로 적용된다.
   */
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+
+  /* 50px 밑에서 위로 올라오면서 투명도가 올라가는 애니메이션이다. */
+}
+
+.nav__btn {
+  transform: translateY(50px);
+  /* transform: translateY(50px);를 애니메이션에 적용시키면 nav__bar가 top에 위치한 상태에서 다시 내려간 후 올라온다.
+    여기에 적어주면 밑에서부터 올라와서 더 자연스러운 애니메이션이 된다.
+  */
+  opacity: 0;
+  animation: appearBtnAnimation 0.5s ease-in-out forwards;
+  /* 애니메이션의 마지막 상태를 유지시키기 위해 forwards를 붙여준다. */
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.nav__btn:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.nav__btn:last-child {
+  animation-delay: 1.5s;
+}
+
+/* 2~4번쨰 child들은 딜레이가 있는 애니메이션을 가지고 있다.예를 들자면 마지막 자식은 1.5초 동안 애니메이션이 없다.
+   그말은 즉 마지막 자식은 1.5초 동안 bottom에 있지 않는다는 것이다. 자신이 애니메이션을 가졌다는 것을 알게 된 후
+   bottom에 있다. top으로 올라오게 된다. 이러면 애니메이션이 부자연스러워진다. opacity 또한 마찬가지이다.
+
+   nav__bar에  opacity: 0; 와 animation: appearBtnAnimation 1s ease-in-out forwards; 를 적어준 이유는 딜레이가
+   있는 자식들 땨문인 것이다.
+*/
