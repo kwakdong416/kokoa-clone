@@ -118,3 +118,27 @@
   margin-left: 3px;
   /* 하트 아이콘과 326 사이에 공간을 줬다. */
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  /* 위 애니메이션에서 sclae 값을 적은 값을 주게 되면 사이즈 계산에 문제가 생겨 애니메이션이 떨리게 되는
+     현상이 일어난다. 그때 유용한 것이 will-change인데 미리 일어날 변화를 브라우저에 알려주는 것이다.
+     이 경우 transform이 일어날 것을 미리 알려줘서 애니메이션이 더 자연스럽게 해주었다.
+  */
+  animation: heartBeat 3s linear infinite;
+}

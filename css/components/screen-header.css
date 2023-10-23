@@ -24,6 +24,21 @@
 
 /* position: relative; 혹은 positon: absolute 를 줬을 때만 left , right , top , bottom을 사용할 수 있다. 이외에는 위치를 재조정하고 싶으면 padding이나 margin을 사용해보자 */
 
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+    /* cog가 Z축을 기준으로 회전한다. */
+  }
+}
+
+.screen-header__icons .fa-cog:hover {
+  /* 마우스 오버가 됐을 때만 작동 */
+  animation: rotateCog 2s linear infinite;
+}
+
 .screen-header__cog-reddot {
   background-color: tomato;
   position: absolute;
