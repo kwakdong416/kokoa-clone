@@ -192,7 +192,7 @@ order를 이용해 순서를 바꿀 수 있다. 다만 flex children에게만 �
   padding: 5px 25px;
   box-sizing: border-box;
   /* padding 때문에 아이콘이 안 보이게 돼서 box-sizing: border-box;를 적용해줬다. */
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   /* 아래에서 만든 키보드 관련 transition이 자연스럽게 하기 위해 여기에 transition 값을 주었다. */
 }
 
@@ -272,7 +272,7 @@ order를 이용해 순서를 바꿀 수 있다. 다만 flex children에게만 �
   /* .reply 내부 element가 focus 되면 아이콘을 숨겨준다. 키보드에 집중하게 하려는 모양 */
 }
 
-.reply:focus-within input {
+.reply input:focus {
   width: 98vw;
   /* 키보드가 커지는 애니메이션을 부드럽게 하기 위해 .reply input 에 transition을 주었다. */
   transform: translateX(-11%) translateY(-80px);
@@ -289,3 +289,5 @@ order를 이용해 순서를 바꿀 수 있다. 다만 flex children에게만 �
   부분만 80px 위로 떠오르게 하는 transition이 완성된다. 이 transition 또한 자연스럽게 하기
   위해 .reply에 transition 관련 설정을 주었다.
 */
+
+/* focus-withins은  부모 요소에 사용하면 내부 자식 요소에 포커스 된 경우까지 스타일을 쉽게 적용된다. */
