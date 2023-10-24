@@ -70,6 +70,19 @@
   /* timestamp와 message-row 간의 공간을 줬다. */
 }
 
+@keyframes fadeInSide-message-row {
+  from {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+
+  /* 채팅창에서 위쪽 채팅을 위한 애니메이션이다. */
+}
+
 .message-row {
   width: 100%;
   display: flex;
@@ -79,6 +92,7 @@
   */
   margin-bottom: 25px;
   /* 채팅 간의 공간을 만들어줬다. */
+  animation: fadeInSide-message-row 2s ease-in-out;
 }
 
 .message-row img {
@@ -119,9 +133,22 @@
   font-size: 13px;
 }
 
+@keyframes fadeInSide-message-row--own {
+  from {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+  /* 채팅창에서 아래쪽 채팅을 위한 애니메이션이다. */
+}
+
 .message-row--own {
   justify-content: flex-end;
   /* message-row에서 이미 display: flex;를 줬기 때문에 여기선 생략한다. */
+  animation: fadeInSide-message-row--own 2s ease-in-out;
 }
 
 .message-row--own .message__bubble {
