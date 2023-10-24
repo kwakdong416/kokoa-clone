@@ -1,7 +1,7 @@
 .chat-screen {
   background-color: #abc1d1;
   /* 채팅의 배경색을 설줭해줬다. */
-  height: 11000vh;
+  height: 500vh;
   /* 채팅 화면의 스크롤을 구현하기 위함이다. */
 }
 
@@ -33,8 +33,20 @@
 
 /* z-index는 숫자가 클수록 위의 layer이다. */
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+  /* 화면 내용이 아래에서 위로 올라오게 하는 애니메이션이다. */
+}
+
 .main-chat {
-  margin-top: 120px;
+  margin-top: 180px;
   /* .chat-screen .alt-header에 top: 0;를 줘서 맨 위에 고정시키고 main-chat에 margin-top: 150px;를 줘서
       status-bar와 alt-header가 timestamp 위에 있어서 겹쳐 보이는 현상을 해결한다.
 
@@ -45,6 +57,7 @@
   /* display: flex;을 주면 배경이 글자에 맞게 크기가 변하는 것을 볼 수 있다. flex이기 떄문
     flex-direction: column;으로 주축의 방향을 바꾼 후 align-items: center; 로 중앙 정렬
   */
+  animation: fadeIn 1s linear;
 }
 
 .chat__timestamp {
@@ -152,6 +165,8 @@ order를 이용해 순서를 바꿀 수 있다. 다만 flex children에게만 �
   padding: 5px 25px;
   box-sizing: border-box;
   /* padding 때문에 아이콘이 안 보이게 돼서 box-sizing: border-box;를 적용해줬다. */
+  transition: all 0.3s ease-in-out;
+  /* 아래에서 만든 키보드 관련 transition이 자연스럽게 하기 위해 여기에 transition 값을 주었다. */
 }
 
 .reply i {
@@ -177,6 +192,8 @@ order를 이용해 순서를 바꿀 수 있다. 다만 flex children에게만 �
   */
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  /* .reply input 에 transition을 주지 않으면 애니메이션이 매우 부자연스러워진다. */
 }
 
 .reply__column:last-child > i, /* last-child > i는 바로 아래 i를 말한다. */
@@ -209,3 +226,39 @@ order를 이용해 순서를 바꿀 수 있다. 다만 flex children에게만 �
   outline: none;
   /* 버튼을 클릭해도 아무일도 일어나지 않게했다. */
 }
+
+.reply .reply__column:first-child,
+.reply .fa-laugh-beam,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+  /* 
+  여기 뿐만reply input 에 transition을 주지 않으면 애니메이션이 매우 부자연스러워진다. 
+  */
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-laugh-beam,
+.reply:focus-within button {
+  opacity: 0;
+  /* .reply:focus-within .reply__column:first-child는 .reply:focus-within가 참이면
+      .reply__column:first-child가 작동하게 해준다. */
+  /* .reply 내부 element가 focus 되면 아이콘을 숨겨준다. 키보드에 집중하게 하려는 모양 */
+}
+
+.reply:focus-within input {
+  width: 98vw;
+  /* 키보드가 커지는 애니메이션을 부드럽게 하기 위해 .reply input 에 transition을 주었다. */
+  transform: translateX(-11%) translateY(-80px);
+  /* 키보드가  + 아이콘이 차지했던 왼쪽 빈 공간까지 꽉 채우게 해준다. */
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
+}
+
+/* .
+  .reply:focus-within에서 transform: translateY(80px);로 .reply 전체를 80px 아래로 내린 후
+  .reply:focus-within input에서 transform: translateX(-11%) translateY(-80px);로 input 
+  부분만 80px 위로 떠오르게 하는 transition이 완성된다. 이 transition 또한 자연스럽게 하기
+  위해 .reply에 transition 관련 설정을 주었다.
+*/
