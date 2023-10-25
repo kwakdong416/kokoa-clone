@@ -1,0 +1,19 @@
+.no-landscape {
+  position: absolute;
+  z-index: 99;
+  /* 항상 맨 위에 있을 수 있도록 z-index에 큰 값을 줬다. */
+  width: 100vw;
+  height: 110vh;
+  background-color: var(--yellow);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+@media screen and (orientation: portrait) {
+  .no-landscape {
+    display: none;
+  }
+}
