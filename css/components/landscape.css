@@ -1,4 +1,4 @@
-.no-landscape {
+.landscape {
   position: absolute;
   z-index: 99;
   /* 항상 맨 위에 있을 수 있도록 z-index에 큰 값을 줬다. */
@@ -13,7 +13,7 @@
 }
 
 @media screen and (orientation: portrait) {
-  .no-landscape {
+  .landscape {
     display: none;
   }
 }
