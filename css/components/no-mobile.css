@@ -1,0 +1,27 @@
+.no-mobile {
+  position: absolute;
+  z-index: 99;
+  /* 항상 맨 위에 있을 수 있도록 z-index에 큰 값을 줬다. */
+  width: 100vw;
+  height: 110vh;
+  background-color: var(--yellow);
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 645px) {
+  .no-mobile {
+    display: none;
+  }
+  /* width가 645px을 넘기면 display: none; 이 되고 이 보다 작으면 .no-mobile에서 display: flex;가 작동하게 되는 미디어 쿼리이다
+    
+     모든 html 페이지에
+      <div class="no-mobile">
+      <span>Your screen is too big.</span>
+    </div>
+    이 코드가 있어야만 Your screen is too big.메세지를 모든 페이지에서 보여줄 수 있다.
+  . */
+}
